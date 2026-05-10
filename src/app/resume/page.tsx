@@ -25,11 +25,11 @@ const resumeData = {
     },
     {
       category: "Backend & AI",
-      items: "Node.js, FastAPI, Chainlit, LangChain, REST API, WebSockets, Fastify"
+      items: "Node.js, FastAPI, Chainlit, REST API, WebSockets, Fastify"
     },
     {
       category: "Data & Ops",
-      items: "TypeScript, Python, PostgreSQL, MongoDB, MySQL, Docker, PM2, GitHub/GitLab"
+      items: "TypeScript, Python, MongoDB, MySQL, Docker, PM2, GitHub/GitLab"
     },
     {
       category: "Specialized",
@@ -185,21 +185,23 @@ export default function Resume() {
             <p className="text-[11px] font-medium text-gray-500 uppercase tracking-wider">{resumeData.specialization}</p>
           </div>
           <div className="text-right text-[12px] font-medium space-y-1">
-            <a href={`mailto:${resumeData.contact.email}`} className="flex items-center justify-end gap-2 hover:text-blue-600 transition-colors">
-              {resumeData.contact.email} <Mail size={12} className="text-blue-600" />
-            </a>
             <a href={`tel:${resumeData.contact.phone.replace(/[^0-9+]/g, '')}`} className="flex items-center justify-end gap-2 hover:text-blue-600 transition-colors">
               {resumeData.contact.phone} <Phone size={12} className="text-blue-600" />
             </a>
-            <a href={`https://${resumeData.contact.linkedin}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-end gap-2 hover:text-blue-600 transition-colors">
-              LinkedIn <FaLinkedin size={12} className="text-blue-600" />
+            <a href={`mailto:${resumeData.contact.email}`} className="flex items-center justify-end gap-2 hover:text-blue-600 transition-colors">
+              {resumeData.contact.email} <Mail size={12} className="text-blue-600" />
             </a>
-            <a href={`https://${resumeData.contact.portfolio}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-end gap-2 hover:text-blue-600 transition-colors">
-              Portfolio <Globe size={12} className="text-blue-600" />
-            </a>
-            <a href={`https://${resumeData.contact.github}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-end gap-2 hover:text-blue-600 transition-colors">
-              GitHub <FaGithub size={12} className="text-blue-600" />
-            </a>
+            <div className="flex items-center justify-end gap-3 pt-1">
+              <a href={`https://${resumeData.contact.linkedin}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                <FaLinkedin size={12} className="text-blue-600" /> LinkedIn
+              </a>
+              <a href={`https://${resumeData.contact.github}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                <FaGithub size={12} className="text-blue-600" /> GitHub
+              </a>
+              <a href={`https://${resumeData.contact.portfolio}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                <Globe size={12} className="text-blue-600" /> Portfolio
+              </a>
+            </div>
           </div>
         </div>
 
