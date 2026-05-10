@@ -7,8 +7,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // Use basePath only in production for GitHub Pages subfolder deployment
-  basePath: isProd ? '/Portfolio' : '',
+  // Set the base path to match your repository name for GitHub Pages
+  basePath: isProd ? '/portfolio' : '',
   trailingSlash: true,
 };
 
