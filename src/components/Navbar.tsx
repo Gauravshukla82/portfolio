@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -33,19 +34,19 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="text-xl font-bold tracking-tighter">
+        <Link href="/" className="text-xl font-bold tracking-tighter">
           GS<span className="text-blue-500">.</span>
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               className="text-sm font-medium text-muted hover:text-foreground transition-colors"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
 
