@@ -28,7 +28,7 @@ import {
   SiLinux,
 } from "react-icons/si";
 import { FaAws, FaEnvelope } from "react-icons/fa";
-import { DiMsqlServer } from "react-icons/di";
+
 
 const skillGroups = [
   {
@@ -77,7 +77,7 @@ const skillGroups = [
       { name: "Mailer Lite", icon: FaEnvelope },
       { name: "Redis", icon: SiRedis },
       { name: "MongoDB", icon: SiMongodb },
-      { name: "SQL Server", icon: DiMsqlServer },
+      { name: "SQL Server", icon: Database },
     ],
     size: "lg:col-span-1",
     description:

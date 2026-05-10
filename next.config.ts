@@ -1,13 +1,14 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  // Set the base path to match your repository name for GitHub Pages
-  basePath: '/Updated-Portfolio',
-  // Ensure that links work correctly on GitHub Pages
+  // Use basePath only in production for GitHub Pages subfolder deployment
+  basePath: isProd ? '/Updated-Portfolio' : '',
   trailingSlash: true,
 };
 
