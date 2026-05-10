@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   // Use basePath only in production for GitHub Pages subfolder deployment
-  basePath: isProd ? '/Updated-Portfolio' : '',
+  basePath: isProd ? '/Portfolio' : '',
   trailingSlash: true,
 };
 
